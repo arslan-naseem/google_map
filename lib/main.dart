@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myproject/view/custom_markers.dart';
+import 'package:myproject/view/lat_to_address_converting.dart';
+import 'package:myproject/view/map_with_seach_option.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'google_map',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CustomMarkerScreen(),
+      home: const LatToAddressConvertingScreen(),
     );
   }
 }

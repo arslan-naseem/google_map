@@ -17,7 +17,7 @@ class _CurrentLocationToDesiredState extends State<CurrentLocationToDesired> {
     await Geolocator.requestPermission()
         .then((value) {})
         .onError((error, stackTrace) {
-      print('Error$error');
+      debugPrint('Error$error');
     });
     return await Geolocator.getCurrentPosition();
   }
@@ -67,7 +67,8 @@ class _CurrentLocationToDesiredState extends State<CurrentLocationToDesired> {
           InkWell(
               onTap: () async {
                 getusercurrentpositin().then((value) async {
-                  print(value.latitude.toString() + value.longitude.toString());
+                  debugPrint(
+                      value.latitude.toString() + value.longitude.toString());
 
                   _latlng.add(LatLng(value.latitude, value.longitude));
 
